@@ -1,0 +1,5 @@
+# ninja log v5
+0	351	1657915473304996852	CMakeFiles/triangle.dir/triangle.cpp.o	5b6faed796805521
+352	475	1657915473424997216	triangle	8dc41e0aa7f2b4e8
+1	439	1657915484245030043	CMakeFiles/triangle.dir/triangle.cpp.o	5b6faed796805521
+439	605	1657915484409030541	triangle	8dc41e0aa7f2b4e8

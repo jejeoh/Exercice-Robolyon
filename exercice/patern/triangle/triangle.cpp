@@ -4,6 +4,13 @@ using namespace std;
 
 // Ceci est purement un test
 
+/*
+ * bon bas je change pas de commentaire que tu a dans pyramide et losange
+ * tu peut utiliser un tableau de char pour le texte
+ * tu peut uniquement afficher le texte en utilisant cout sans les stocker dans ton string
+ * et fait des nom de variable complet et en anglais
+ * sinon c'est nickel bravo !
+ */
 
 int main(){
 
@@ -21,7 +28,7 @@ int main(){
                 st = st + "*";
         }
         nb++;
-        cout << nb << st << endl;
+        cout << st << endl;
         st = "*";
     }
 
