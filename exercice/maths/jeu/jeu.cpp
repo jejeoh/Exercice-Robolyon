@@ -7,42 +7,41 @@ using namespace std;
 
 // Ceci est purement un test
 
+/*
+ * c'est bien mais il manque la prise en compte des nombre plus petit que 0 et plus quand que 500
+ */
 
-int main(){
-
+int main() {
     cout << "Donnez moi le nombre ou vous voulez la somme de ses nombres : ";
-    int nomb(0);
-    int dem(0);
-    int test(0);
-    bool no(false);
+    int numberToFind(0);
+    int inputNumber(0);
+    int tryCounter(0);
+    bool gameOver(false);
     srand(time(NULL));
-    nomb = rand()%500;
-    cin >> dem;
-
-
-    while(nomb != dem){
-        test++;
-    
-
-        if(dem < nomb){
+    numberToFind = rand() % 500;
+    cin >> inputNumber;
+    while (numberToFind != inputNumber) {
+        tryCounter++;
+        if (inputNumber<0 || inputNumber > 500){
+            cout << "Vous avez entré un nombre qui n'est pas compris entre 0 et 500 veuillez retenter" << endl;
+            tryCounter--;//on ne compte pas cet essai
+        }
+        else if (inputNumber < numberToFind) {
             cout << "Trop petit essaye encore !" << endl;
-        }else{
+        } else {
             cout << "Trop grand essaye encore !" << endl;
         }
-
-        if(test == 10) {
-            no = true;
+        if (tryCounter >= 10) {//c'est plus safe au cas ou sur un malentendu il y a un + 2
+            gameOver = true;
             break;
         }
-        cin >> dem;
+        cin >> inputNumber;
     }
 
-    if(no){
-        cout << "Dommage tu n'a pas trouve la bonne reponse, c'etait : " << nomb;
+    if (gameOver) {
+        cout << "Dommage tu n'a pas trouve la bonne reponse, c'etait : " << numberToFind;
         return 0;
     }
-
-    cout << "Bien joue la bonne reponse etait bien " << nomb;
-
+    cout << "Bien joue la bonne reponse etait bien " << numberToFind;
     return 0;
 }
