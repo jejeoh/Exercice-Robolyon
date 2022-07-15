@@ -4,7 +4,14 @@ using namespace std;
 
 // Ceci est purement un test
 
-
+/*
+ * bon flemme de refaire la même chose que le losange
+ * tu pourrait utiliser un tableau de char pour economiser de la mémoir
+ * tu pourrais aussi afficher sans stocker
+ * et les nom des variable, fait les en anglais et t'embete pas a abrevier
+ * les abreviation ca rend plus difficile a comprendre et ton ide fait la completion pour toi donc c'est pas chiant les nom long
+ * hormis ca, c'est trés propre
+ */
 int main(){
 
     cout << "Donnez moi la hauteur de la pyramide : ";
@@ -21,11 +28,9 @@ int main(){
 
     while(ha != nb){
         nb++;
-
         niv = nb*2;
         nombre = (nv - niv)/2;
         for(int nomb = 0; nomb != nv; nomb++){
-
             if(nombre != 0){
                 st = st + "_";
                 nombre--;
@@ -36,7 +41,7 @@ int main(){
                 st = st + "_";
             }
         }
-        cout << nb << st << endl;
+        cout << st << endl;
         st = "";
     }
 
